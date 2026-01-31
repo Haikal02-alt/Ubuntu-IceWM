@@ -8,7 +8,9 @@ Ubuntu IceWM Is Lighter Than Ubuntu LXDE Because IceWM is a window manager only,
 
 Resource Usage Comparison
 Setup	Idle RAM Usage	CPU Load (Idle)	Disk Footprint	Components
+
 Ubuntu LXDE	~120 MB	Very low (<2%)	Larger (includes lxpanel, lxsession, PCManFM, etc.)	Full desktop environment
+
 Ubuntu IceWM	~60–80 MB	Extremely low (<1%)	Smaller (only window manager + basic panel/taskbar)	Window manager only
 
 Why IceWM Is Lighter

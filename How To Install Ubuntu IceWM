@@ -1,0 +1,34 @@
+1 Download Ubuntu Server Iso From https://ubuntu.com/download/server
+2 Flash The Iso Using BalenaEtcher Rufus DD Mode Ventoy Etc
+3 Setup Ubuntu Server
+4 If You See Choose the type of installation Its Strictly Recommended To Use Ubuntu Server (minimized) Because Ubuntu Server Minimized is highly lightweight
+offering a drastically reduced package set (~50% smaller image size) that boots up to 40% faster than the standard server edition
+utilizing fewer system resources and requiring fewer security updates
+making it ideal for minimal footprints, though it lacks many common administrative tools. 
+5 Then Wait Until Installation Finished
+6 You May Stop The Services Of Snap
+  sudo systemctl stop snapd
+  sudo systemctl disable snapd
+
+7 Purge Snapd (Recommended For Older Hardware Or Any Slow Hardware)
+  sudo apt purge snapd
+
+8 7 Clean Up Leftover Directories
+  rm -rf ~/snap
+  sudo rm -rf /var/snap /var/lib/snapd /var/cache/snapd
+
+9 Reboot
+  sudo reboot
+
+10 System Updates: Ubuntu may reinstall Snapd during major upgrades. To prevent this, you can block Snapd from being reinstalled:
+  sudo apt-mark hold snapd
+
+11 Install IceWM And Wallpapers
+  sudo apt update
+  sudo apt install icewm ubuntu-wallpapers
+
+12 Reboot Using Sudo Reboot
+
+13 Have Fun And Start Using Ubuntu IceWM
+
+   

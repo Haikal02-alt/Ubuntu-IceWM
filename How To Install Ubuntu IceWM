@@ -5,30 +5,33 @@
 offering a drastically reduced package set (~50% smaller image size) that boots up to 40% faster than the standard server edition
 utilizing fewer system resources and requiring fewer security updates
 making it ideal for minimal footprints, though it lacks many common administrative tools. 
-5 Then Wait Until Installation Finished
-6 You May Stop The Services Of Snap
+5 You May Stop The Services Of Snap
   sudo systemctl stop snapd
   sudo systemctl disable snapd
 
-7 Purge Snapd (Recommended For Older Hardware Or Any Slow Hardware)
+6 Purge Snapd (Recommended For Older Hardware Or Any Slow Hardware)
   sudo apt purge snapd
 
-8 7 Clean Up Leftover Directories
+7 Clean Up Leftover Directories
   rm -rf ~/snap
   sudo rm -rf /var/snap /var/lib/snapd /var/cache/snapd
 
-9 Reboot
+8 Reboot
   sudo reboot
 
-10 System Updates: Ubuntu may reinstall Snapd during major upgrades. To prevent this, you can block Snapd from being reinstalled:
+9 System Updates: Ubuntu may reinstall Snapd during major upgrades. To prevent this, you can block Snapd from being reinstalled:
   sudo apt-mark hold snapd
 
-11 Install IceWM And Wallpapers
+10 Install IceWM And Wallpapers
   sudo apt update
   sudo apt install icewm ubuntu-wallpapers
 
-12 Reboot Using Sudo Reboot
+11 If Theres No Login Manager Install It Using sudo apt install lightdm lightdm-gtk-greeter
 
-13 Have Fun And Start Using Ubuntu IceWM
+12 After You Install LightDM Run These Commands
+   sudo systemctl enable lightdm
+   sudo systemctl start lightdm
+
+12 Have Fun And Start Using Ubuntu IceWM
 
    
